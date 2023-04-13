@@ -37,5 +37,17 @@ function Descencriptar() {
     Mostrar(texto);
 }
 
-  
+function copiarTexto(){
+    let input = document.getElementById("texto");
+    navigator.clipboard.writeText(input.innerText)
+    .then(function() {
+      // Mostrar una notificación o realizar acciones adicionales
+      console.log("Texto copiado al portapapeles: " + input.innerText);
+    })
+    .catch(function(err) {
+      // Manejar errores en caso de que no se pueda copiar el texto
+      console.error("Error al copiar el texto: ", err);
+    })
+    
+}
   

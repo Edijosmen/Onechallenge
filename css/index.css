@@ -12,7 +12,6 @@ main{
 .entrada{
 width: 70%;
 height: 100%;
-
 }
 .entrada:first-child{
     position: relative;
@@ -124,7 +123,7 @@ aside{
     background: #E5E5E5;
     padding-top: 30px;
     padding-right: 30px;
-    display: none;
+    display: flex;
     justify-content: end;
 }
 .no-date section{
@@ -182,7 +181,7 @@ aside{
 .date{
     margin-top: 30px;
     margin-right: 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     background: white;
@@ -246,3 +245,79 @@ footer{
     display: flex;
     justify-content: end;
 }
+
+
+/* Estilos para dispositivos móviles (ancho de pantalla de hasta 767px) */
+@media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles aquí */
+    main{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        background: #E5E5E5;
+    }
+    .entrada{
+        width: auto;
+        height: 100%;
+        }
+    .entrada section textarea{
+        width: auto;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        border: none;
+        background-color: #E5E5E5;
+
+        outline: none;
+        color: #0A3871;
+        margin: 10px;
+    }
+    .contenido .acciones div {
+       align-content: center;
+    }
+    .contenido .acciones .btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10px;  
+        align-items: center; 
+    }
+    .contenido  .acciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    }
+    aside{
+        width: auto;
+        height: auto;
+    }
+    .no-date{
+        background: #E5E5E5;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .no-date section{
+        width: auto;
+       height: 600px;
+    }
+    .date{
+        margin: 0px 15px;
+        width:auto;
+        height: 600px;  
+        display: none;
+    }
+}
+  /* Estilos para tablets (ancho de pantalla de 768px a 1023px) */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para tablets aquí */
+  }
